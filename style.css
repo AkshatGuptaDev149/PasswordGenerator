@@ -1,0 +1,271 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+
+#mainHead{
+    padding:10px;
+    margin-top: 20px;
+    background:white;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#container{
+    margin: 0 auto;
+    height:50vh;
+    width: 60vw;
+    background-color: #94eaf3;
+    border-radius: 10px;
+}
+#header{
+    background-color: white;
+    height: 10%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;   
+}
+#header span{
+    margin: 0px 10px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: cursive;
+}
+.circle{
+    margin:10px 10px ;
+    float: right;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+}
+#main{
+    height: 90%;
+    position: relative;
+}
+#lock{
+    position: absolute;
+    left: 6%;
+}
+
+#generate{
+    position:absolute;
+    left: 36%;
+    bottom: 6%;
+    color: blue;
+    background-color: white;
+    font-size:35px;
+    font-weight: 600;
+    font-family:revert;
+    cursor: pointer;
+    letter-spacing:-2px ;
+    border: 2px solid white;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+#generate:hover{
+    background-color: blue;
+    color: white;
+}
+.pBox{
+    cursor: pointer;
+}
+#passArea{
+    background-color: white;
+    border: 2px solid black;
+    height: 90%;
+    border-radius: 15px;
+    width: 40%;
+    position:absolute;
+    margin: 5px;
+    right: 1%;
+    display: flex;
+    flex-direction: column;
+}
+#keyArea{
+    height: 80%;
+    position: relative;
+}
+#key{
+    position: absolute;
+    top: 5%;
+    left: 4%;
+}
+.BlinkAnim{
+    animation: Blink 0.5s ease-in-out 0s infinite alternate  ;   
+}
+#passInput{
+    position: absolute;
+    bottom: 5%;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 95%;
+    margin: 5px 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: cursive;
+}
+
+
+#Copy{
+    height: 16%;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    background-color: rgb(52, 218, 52);
+    font-size:35px;
+    font-weight: 600;
+    font-family:cursive;
+    letter-spacing:-2px ;
+    border: 2px solid white;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+}
+
+.fill{
+    animation: fill_anim 1s ease-in forwards 3.2s
+}
+
+#key path{
+    stroke-dasharray: 1402.37px;
+    stroke-dashoffset: 1402.37px;
+}
+.KeyAnimation{
+    animation: line-anim 3.6s ease-in forwards;
+}
+
+
+@keyframes Blink{
+    0%{
+        color: black;
+    }
+    100%{
+        color: rgba(0, 0, 0, 0);
+    }
+    
+}
+
+@keyframes fill_anim{
+    from{
+        fill: white;
+    }
+    
+    to{
+        fill: #FFCC17;
+    }
+}
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+
+
+
+/* Making things responsive */
+
+@media all and (max-width:680px) and (min-width:425px){
+    #mainHead{
+        font-size: 40px;
+    }
+    #header span{
+        font-size: 15px;
+    }
+    .circle{
+        margin: 5px 10px;
+        height: 8px;
+        width: 8px;
+    }
+    #lock{
+        height: 163px;
+        width: 109px;
+    }
+    #generate{
+        font-size: 18px;
+    }
+    #passArea{
+        width: 36%;
+    }
+    #key{
+        height: 52px;
+        width: 133px;
+    }
+    #passInput{
+        width: 89%;
+        font-size: 15px ;
+        height: 22px;
+    }
+    #Copy{
+        height: 17%;
+        font-size: 20px;
+        padding: 0px;
+    }
+}
+
+
+@media all and (max-width:425px){
+    #mainHead{
+        font-size: 40px;
+    }
+    #header{
+        height: 6%;
+    }
+    #header span {
+        font-size:15px ;
+    }
+    #container{
+        height: 80vh;
+        width: 65vw;
+    }
+    .circle{
+        margin:10px 5px;
+        height: 6px;
+        width: 6px;
+    }
+    #lock{
+        height: 172px;
+        width: 210px;
+    }
+    #passArea{
+        bottom: 10%;
+        height: 40%;
+        width: 78%;
+        right: 7%;
+    }
+    #Copy{
+        height: 11%;
+        font-size: 17px;
+        padding: 0px;
+    }
+    #generate{
+        left: 29%;
+        bottom: 55%;
+        font-size: 23px;
+    }
+    #key{
+        width: 175px;
+    }
+    #passInput{
+        height: 22px;
+        width:91% ;
+        font-size: 20px;
+    }
+}
