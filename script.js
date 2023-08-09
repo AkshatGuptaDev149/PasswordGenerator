@@ -4,7 +4,7 @@ class password {
       this.type = type
     }
     static generateWeakPass() {
-      let Weakarray = ['123456', '123456789', '123456789', '1234', '1234567', 'qwertyuiop', 'qwerty', 'pass', 'password', '111111', 'qwerty111', 'dragon', 'letmein', 'football', 'iloveyou', 'master', 'key', 'masterkey']
+      let Weakarray = ['123456', '123456789', '123456789', '1234', '1234567', 'qwertyuiop', 'qwerty', 'pass', 'password', '111111', 'qwerty111', 'dragon', 'letmein', 'football', 'Passkey', 'master', 'key', 'masterkey']
       return Weakarray[Math.floor(Math.random() * Weakarray.length)]
     }
     static generateMediumPass() {
@@ -19,7 +19,7 @@ class password {
       return pass
     }
     static generateStrongPass() {
-      let length = 6 + Math.floor(Math.random() * 8)
+      let length =8  + Math.floor(Math.random() * 8)
       let pass = ''
       for (let i = 0; i < length; i++) {
         if (Math.random() >= 0.5) {
@@ -71,7 +71,7 @@ class password {
     else {
       alert('Please choose a type of password')
     }
-    console.log(generatedPass)
+    
     passInput.setAttribute('value', '- - - - -')
     passInput.classList.add('BlinkAnim')
   
